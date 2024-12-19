@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIPO DE DATOS</title>
+  </head>
+  <body>
+    <br /><br /><br />
+    <h1>TIPO DE DATOS</h1>
+
+    <p>PRIMITIVOS: Se accede directamente al valor</p>
+    <ul>
+      <li>STRING</li>
+      <li>NUMBER</li>
+      <li>BOOLEAN</li>
+      <li>NULL</li>
+      <li>UNDEFINED</li>
+      <li>NaN</li>
+    </ul>
+
+    <p>COMPUSESTOS: Se acede a la referencia del valor.</p>
+
+    <ul>
+      <li>OBJECT = {}</li>
+      <li>ARRAY = []</li>
+      <li>FUNCTION = ()</li>
+      <li>CLASS = {}</li>
+      <li>ETC</li>
+    </ul>
+
+    <br /><br /><br /><br /><br />
+    <hr />
+
+    <p>
+      primero vamos a hacer una lista con los tipos de datos que tenemos en
+      JavaScript, y despues vamos a verlos en detalle
+    </p>
+
+    <ul id="menu">
+      <li><a href="">VARIABLES: Var VS Let</a></li>
+      <li><a href="">CONSTANTES (const)</a></li>
+      <li><a href="">CADENAS DE TEXTO (strings)</a></li>
+      <li><a href="">PLANTILLAS DE CADENAS DE TEXTO (template strings)</a></li>
+      <li><a href="">NÚMEROS (numbers)</a></li>
+      <li><a href="">BOOLEANS</a></li>
+      <li><a href="">UNDEFINED, NULL & NaN</a></li>
+      <li><a href="">FUNCIONES</a></li>
+      <li><a href="">ARREGLOS (arrays)</a></li>
+      <li><a href="">OBJETOS</a></li>
+    </ul>
+    <br />
+    <hr />
+
+    <h2>VARIABLES: Var VS Let</h2>
+    <p>
+      Que es una Variable: es un espacio en la memoria para almacenar datos,
+      como números o texto, y se puede referir a ellos con un nombre. Las
+      variables son útiles para guardar y recuperar datos, y para asignar nuevos
+      valores.
+    </p>
+
+    <p>
+      Para escribir codigo JavaScript en html tenemos que poner la etiqueta
+      script, y para ver el resultado hay que abrir el inspeccionador del navegador y pasar a la consola del inspeccionar, donde vamos a ver los resultados del script, esa es la forma de hacerlo en html, lo ideal es hacer una hoja solo de JavaScript y hacer un enlace a esa pagina desde el html.
+    </p>
+
+    <p>Como se declara una variable?</p>
+
+    <p>Utilizamos la palabra reservada VAR junto al nombre de la variable, despues = y en el caso ejemplo vamos a poner un string, por lo tanto ponemos "Hola Mundo" (entre comillas porque es un string), abajo vemos el codigo para que lo copien y lo puedan probar en su navegador</p>
+
+    <pre>
+      &lt;script>
+      var hola = "Hola Mundo";
+      console.log(hola);
+    /script&gt;
+    </pre>
+
+    <p>Si abrimos la consola como mencionamos arriba, vamos a ver que nos sale el famoso "Hola Mundo"</p>
+
+    <script>
+      var hola = "Hola Mundo";
+      console.log(hola);
+    </script>
+
+    <p>Las variables existen en forma GLOBAL o de BLOQUE</p>
+    <p>En el código anterior la variable hola es de tipo global, es decir que puede ser utilizada desde cualquier parte del código.</p>
+    <p>Si quisieramos crear una variable de bloque, utilizamos la palabra reservada LET</p>
+    <p>Aca vamos a ver un ejemplo con LET</p>
+
+    <script>
+      let hello = "Hello world!";
+      console.log(hello);
+    </script>
+
+
+    <pre>
+      &lt;script>
+      let hello = "Hello world!";
+      console.log(hello);
+    /script&gt;
+    </pre>
+
+    <p>Para dejar en claro los las variables con VAR y LET</p>
+    <ul> 
+    <li> <p>Var es una palabra reservada que se utiliza para declarar variables globales, es decir que se pueden utilizar en cualquier parte del código.</p></li>
+    <li> <p>Con LET y CONST, se declaran variables locales, es decir que solo se pueden utilizar dentro del bloque en el que se han creado.</p></li>
+    </ul>
+
+    <h3>ENTONCES, QUE UTILIZAMOS, VAR O LET?</h3>
+    <p>La buena practica dice que NO SE USE MAS VAR NO ES BUENA PRACTICA, porque son variables globales, cuando tu codigo es chico no vas a tener problemas sobre reasignacion de valores, pero si tu codigo crece, por ahi asignas un nombre de variable que ya tenias y le cambias el valor sin darte cuenta, porque VAR es global, y de esa forma vas a tener muchos dolores de cabeza, en cambio si utilizamos LET las variables son en bloque y por lo tanto podemos utilizar el mismo nombre de variable sin correr el riesgo de sobreescribir una variable anterior.</p>
+
+    <p>Para que se entienda con un ejemplo porque no es recomendable usar VAR vamos a ver los siguientes ejemplos:</p>
+
+    <script>
+      var musica = "ROCK"
+      console.log("La variable fuera del bloque nos muestra ", musica);
+
+      {
+        var musica = "JAZZ";
+        console.log("La variable dentro del bloque muestra ", musica);
+      }
+      console.log("La variable fuera del bloque nos muestra de nuevo ", musica);
+    </script>
+
+    <pre>
+      &lt;script>
+      var musica = "ROCK"
+      console.log("La variable fuera del bloque nos muestra ", musica);
+
+      {
+        var musica = "JAZZ";
+        console.log("La variable dentro del bloque muestra ", musica);
+      }
+      console.log("La variable fuera del bloque nos muestra de nuevo ", musica);
+    /script&gt;
+    </pre>
+
+    <p>EXPLICACION</p>
+    <p>Creamos la variable musica (usando var) fuera del bloque, despues hacemos un bloque con las llaves { todo lo que esta aca adentro es un bloque en JavaScript }, donde modificamos la variable musica en el bloque, y al salir del bloque hacemos otro console.log para ver que nos toma la variable musica y el resultado es JAZZ, porque la variable con VAR es de hambito global. Ahora vamos a hacer el mismo ejemplo con LET </p>
+
+    <p>Ejemplo con LET</p>
+
+    <script>
+      console.log("**********************************")
+      let musica2 = "ROCK"
+      console.log("La variable fuera del bloque nos muestra ", musica2);
+
+      {
+        let musica2 = "JAZZ";
+        console.log("La variable dentro del bloque muestra ", musica2);
+      }
+      console.log("La variable fuera del bloque nos muestra de nuevo ", musica2);
+    </script>
+
+    <pre>
+      &lt;script>
+      let musica2 = "ROCK"
+      console.log("La variable fuera del bloque nos muestra ", musica2);
+
+      {
+        let musica2 = "JAZZ";
+        console.log("La variable dentro del bloque muestra ", musica2);
+      }
+      console.log("La variable fuera del bloque nos muestra de nuevo ", musica2);
+    /script&gt;
+    </pre>
+
+    <p>Cuando vemos en la consola el resultado de las variables con LET vemos que el let que esta fuera del bloque nos muestra "ROCK", la que esta dentro del bloque nos muestra "JAZZ" y el console.log fuera del bloque nos da como resultado "ROCK", PORQUE LET ES UNA VARIABLE DEL HAMBITO LOCAL, por este motivo dicen que es buena practica usar LET y no VAR</p>
+
+
+    <br /><br /><br /><br /><br />
+    <hr />
+
+    <p></p>
+
+    <br /><br /><br />
+    <a href="introduccion.html"><button>INTRODUCCION</button></a>
+    <a href="index.html"><button>INICIO</button></a>
+    <a href="estructuras_de_control.html"
+      ><button>ESTRUCTURAS DE CONTROL</button></a
+    >
+  </body>
+</html>
