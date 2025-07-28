@@ -127,7 +127,6 @@
       &lt;script>
       var musica = "ROCK"
       console.log("La variable fuera del bloque nos muestra ", musica);
-
       {
         var musica = "JAZZ";
         console.log("La variable dentro del bloque muestra ", musica);
@@ -157,7 +156,6 @@
       &lt;script>
       let musica2 = "ROCK"
       console.log("La variable fuera del bloque nos muestra ", musica2);
-
       {
         let musica2 = "JAZZ";
         console.log("La variable dentro del bloque muestra ", musica2);
@@ -169,7 +167,87 @@
     <p>Cuando vemos en la consola el resultado de las variables con LET vemos que el let que esta fuera del bloque nos muestra "ROCK", la que esta dentro del bloque nos muestra "JAZZ" y el console.log fuera del bloque nos da como resultado "ROCK", PORQUE LET ES UNA VARIABLE DEL HAMBITO LOCAL, por este motivo dicen que es buena practica usar LET y no VAR</p>
 
 
-    <br /><br /><br /><br /><br />
+    <br /><br />
+    
+    <h3>CONSTANTES</h3>
+
+    <p>Una constantes es un tipo INMUTABLE, NO puede cambiar una vez definida, se usa la palabra const en lugar de var, al igual que let su scope es de bloque, son tipos de sólo lectura y se le debe asignar un valor en el momento de su declaración. Son referencias inmutables, pero sus valores no necesariamente.</p>
+
+    <hr>
+<pre>     const DIEZ = 10;
+            DIEZ = 5;
+            console.log(DIEZ); // Imprime Uncaught TypeError: Assignment to constant variable</pre>
+
+<p>Aca el error nos dice que "NO SE PUEDE REASIGNAR UNA CONSTANTE" como declaramos la constante en 10, no le podemos decir que despues vale 5, justamente porque es una constante y las constantes no varian.</p>
+
+<script>
+            const DIEZ = 10;
+              DIEZ = 5;
+              console.log(DIEZ); // Imprime Uncaught TypeError: Assignment to constant variable
+</script>
+<hr>
+
+<pre>     const hola = 'hola mundo';
+            hola = 'hola mundo'; // Imprime Uncaught TypeError: Assignment to constant variable
+</pre>
+
+<p>En este ejemplo, declaramos la variable "hola" y le asignamos "hola mundo", pero despues al poner hola =, JavaScript lo toma como una reasignacion y sale el error, aunque como se ve la reasignacion es la misma declarada en la constante, pero no se lee la reasignacion, sino que se lee que se quiere hacer una reasignacion nada mas.</p>
+
+<script>
+  const hola = 'hola mundo';
+    hola = 'hola mundo'; // Imprime Uncaught TypeError: Assignment to constant variable
+</script>
+<hr>
+
+<pre>     const PI;
+            PI = 3.141592653589793; //Imprime Missing initializer in const declaration</pre>
+
+<p>Una de las reglas de las constantes dice que "LAS VARIABLES DECLARADAS CON CONST, DEBEN SER INICIALIZADAS EN EL MISMO MOMENTO DE SU DECLARACION".</p>
+<p>"NO SE PUEDE DECLARLAR LA CONSTANTE PRIMERO Y ASIGNARLE UN VALOR DESPUES, COMO SI SE PUEDE HACER CON LET O VAR.</p>
+<h4>¿PORQUE ESTA RESTRICCIÓN?</h4>
+<p>CONST fue creada para garantizar que una variable nunca cambie después de su creación</p>
+<p>Si permitiera asignaciones posteriores, perderia su propósito de ser una "constante".</p>
+
+<script>
+  const PI;
+    PI = 3.141592653589793; //Imprime Missing initializer in const declaration
+</script>
+<hr>
+
+<pre>     const obj = {};
+            obj.prop = 'x';
+            console.log(obj); //Imprime { prop: 'x' }
+            obj.prop = 'y';
+            console.log(obj); //Imprime { prop: 'y' }
+</pre>
+
+<p>En este ejemplo se declara un objeto vacio {}</p>
+<p><strong>IMPORTANTE</strong>: const solo evita la reasignación de la variable obj, pero no protege las propiedades del objeto. Es decir, obj = nuevo_objeto; nos daria error, pero modificar con obj.prop es valido, porque estamos accediendo a la propiedad del objeto en si.</p>
+<p>Aunque obj es una constante, <strong> sus propiedades pueden ser modificadas, añadidas o eliminadas</strong></p>
+<p>En el ejemplo tenemos dos reasignaciones, pero no a la const sino a su propiedad, por eso vemos que hay 2 cambios</p>
+
+<script>
+  const obj = {};
+    obj.prop = 'x';
+    console.log(obj); //Imprime { prop: 'x' }
+    obj.prop = 'y';
+    console.log(obj); //Imprime { prop: 'y' }
+</script>
+<hr>
+
+<pre>     const D = document;
+            console.log(D); //Imprime el objeto document
+            console.log(D.documentElement); //Imprime el elemento &lt;html&gt;
+</pre>
+
+<script>
+  const D = document;
+    console.log(D); //Imprime el objeto document
+    console.log(D.documentElement); //Imprime el elemento <html>
+</script>
+<hr>
+
+    <br /><br /><br />
     <hr />
 
     <p></p>
