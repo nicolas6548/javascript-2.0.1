@@ -62,12 +62,21 @@
 
     <p>
       Para escribir codigo JavaScript en html tenemos que poner la etiqueta
-      script, y para ver el resultado hay que abrir el inspeccionador del navegador y pasar a la consola del inspeccionar, donde vamos a ver los resultados del script, esa es la forma de hacerlo en html, lo ideal es hacer una hoja solo de JavaScript y hacer un enlace a esa pagina desde el html.
+      script, y para ver el resultado hay que abrir el inspeccionador del
+      navegador y pasar a la consola del inspeccionar, donde vamos a ver los
+      resultados del script, esa es la forma de hacerlo en html, lo ideal es
+      hacer una hoja solo de JavaScript y hacer un enlace a esa pagina desde el
+      html.
     </p>
 
     <p>Como se declara una variable?</p>
 
-    <p>Utilizamos la palabra reservada VAR junto al nombre de la variable, despues = y en el caso ejemplo vamos a poner un string, por lo tanto ponemos "Hola Mundo" (entre comillas porque es un string), abajo vemos el codigo para que lo copien y lo puedan probar en su navegador</p>
+    <p>
+      Utilizamos la palabra reservada VAR junto al nombre de la variable,
+      despues = y en el caso ejemplo vamos a poner un string, por lo tanto
+      ponemos "Hola Mundo" (entre comillas porque es un string), abajo vemos el
+      codigo para que lo copien y lo puedan probar en su navegador
+    </p>
 
     <pre>
       &lt;script>
@@ -76,7 +85,10 @@
     /script&gt;
     </pre>
 
-    <p>Si abrimos la consola como mencionamos arriba, vamos a ver que nos sale el famoso "Hola Mundo"</p>
+    <p>
+      Si abrimos la consola como mencionamos arriba, vamos a ver que nos sale el
+      famoso "Hola Mundo"
+    </p>
 
     <script>
       var hola = "Hola Mundo";
@@ -84,15 +96,20 @@
     </script>
 
     <p>Las variables existen en forma GLOBAL o de BLOQUE</p>
-    <p>En el código anterior la variable hola es de tipo global, es decir que puede ser utilizada desde cualquier parte del código.</p>
-    <p>Si quisieramos crear una variable de bloque, utilizamos la palabra reservada LET</p>
+    <p>
+      En el código anterior la variable hola es de tipo global, es decir que
+      puede ser utilizada desde cualquier parte del código.
+    </p>
+    <p>
+      Si quisieramos crear una variable de bloque, utilizamos la palabra
+      reservada LET
+    </p>
     <p>Aca vamos a ver un ejemplo con LET</p>
 
     <script>
       let hello = "Hello world!";
       console.log(hello);
     </script>
-
 
     <pre>
       &lt;script>
@@ -102,18 +119,41 @@
     </pre>
 
     <p>Para dejar en claro los las variables con VAR y LET</p>
-    <ul> 
-    <li> <p>Var es una palabra reservada que se utiliza para declarar variables globales, es decir que se pueden utilizar en cualquier parte del código.</p></li>
-    <li> <p>Con LET y CONST, se declaran variables locales, es decir que solo se pueden utilizar dentro del bloque en el que se han creado.</p></li>
+    <ul>
+      <li>
+        <p>
+          Var es una palabra reservada que se utiliza para declarar variables
+          globales, es decir que se pueden utilizar en cualquier parte del
+          código.
+        </p>
+      </li>
+      <li>
+        <p>
+          Con LET y CONST, se declaran variables locales, es decir que solo se
+          pueden utilizar dentro del bloque en el que se han creado.
+        </p>
+      </li>
     </ul>
 
     <h3>ENTONCES, QUE UTILIZAMOS, VAR O LET?</h3>
-    <p>La buena practica dice que NO SE USE MAS VAR NO ES BUENA PRACTICA, porque son variables globales, cuando tu codigo es chico no vas a tener problemas sobre reasignacion de valores, pero si tu codigo crece, por ahi asignas un nombre de variable que ya tenias y le cambias el valor sin darte cuenta, porque VAR es global, y de esa forma vas a tener muchos dolores de cabeza, en cambio si utilizamos LET las variables son en bloque y por lo tanto podemos utilizar el mismo nombre de variable sin correr el riesgo de sobreescribir una variable anterior.</p>
+    <p>
+      La buena practica dice que NO SE USE MAS VAR NO ES BUENA PRACTICA, porque
+      son variables globales, cuando tu codigo es chico no vas a tener problemas
+      sobre reasignacion de valores, pero si tu codigo crece, por ahi asignas un
+      nombre de variable que ya tenias y le cambias el valor sin darte cuenta,
+      porque VAR es global, y de esa forma vas a tener muchos dolores de cabeza,
+      en cambio si utilizamos LET las variables son en bloque y por lo tanto
+      podemos utilizar el mismo nombre de variable sin correr el riesgo de
+      sobreescribir una variable anterior.
+    </p>
 
-    <p>Para que se entienda con un ejemplo porque no es recomendable usar VAR vamos a ver los siguientes ejemplos:</p>
+    <p>
+      Para que se entienda con un ejemplo porque no es recomendable usar VAR
+      vamos a ver los siguientes ejemplos:
+    </p>
 
     <script>
-      var musica = "ROCK"
+      var musica = "ROCK";
       console.log("La variable fuera del bloque nos muestra ", musica);
 
       {
@@ -136,20 +176,30 @@
     </pre>
 
     <p>EXPLICACION</p>
-    <p>Creamos la variable musica (usando var) fuera del bloque, despues hacemos un bloque con las llaves { todo lo que esta aca adentro es un bloque en JavaScript }, donde modificamos la variable musica en el bloque, y al salir del bloque hacemos otro console.log para ver que nos toma la variable musica y el resultado es JAZZ, porque la variable con VAR es de hambito global. Ahora vamos a hacer el mismo ejemplo con LET </p>
+    <p>
+      Creamos la variable musica (usando var) fuera del bloque, despues hacemos
+      un bloque con las llaves { todo lo que esta aca adentro es un bloque en
+      JavaScript }, donde modificamos la variable musica en el bloque, y al
+      salir del bloque hacemos otro console.log para ver que nos toma la
+      variable musica y el resultado es JAZZ, porque la variable con VAR es de
+      hambito global. Ahora vamos a hacer el mismo ejemplo con LET
+    </p>
 
     <p>Ejemplo con LET</p>
 
     <script>
-      console.log("**********************************")
-      let musica2 = "ROCK"
+      console.log("**********************************");
+      let musica2 = "ROCK";
       console.log("La variable fuera del bloque nos muestra ", musica2);
 
       {
         let musica2 = "JAZZ";
         console.log("La variable dentro del bloque muestra ", musica2);
       }
-      console.log("La variable fuera del bloque nos muestra de nuevo ", musica2);
+      console.log(
+        "La variable fuera del bloque nos muestra de nuevo ",
+        musica2
+      );
     </script>
 
     <pre>
@@ -164,88 +214,144 @@
     /script&gt;
     </pre>
 
-    <p>Cuando vemos en la consola el resultado de las variables con LET vemos que el let que esta fuera del bloque nos muestra "ROCK", la que esta dentro del bloque nos muestra "JAZZ" y el console.log fuera del bloque nos da como resultado "ROCK", PORQUE LET ES UNA VARIABLE DEL HAMBITO LOCAL, por este motivo dicen que es buena practica usar LET y no VAR</p>
-
+    <p>
+      Cuando vemos en la consola el resultado de las variables con LET vemos que
+      el let que esta fuera del bloque nos muestra "ROCK", la que esta dentro
+      del bloque nos muestra "JAZZ" y el console.log fuera del bloque nos da
+      como resultado "ROCK", PORQUE LET ES UNA VARIABLE DEL HAMBITO LOCAL, por
+      este motivo dicen que es buena practica usar LET y no VAR
+    </p>
 
     <br /><br />
-    
+
     <h3>CONSTANTES</h3>
 
-    <p>Una constantes es un tipo INMUTABLE, NO puede cambiar una vez definida, se usa la palabra const en lugar de var, al igual que let su scope es de bloque, son tipos de sólo lectura y se le debe asignar un valor en el momento de su declaración. Son referencias inmutables, pero sus valores no necesariamente.</p>
+    <p>
+      Una constantes es un tipo INMUTABLE, NO puede cambiar una vez definida, se
+      usa la palabra const en lugar de var, al igual que let su scope es de
+      bloque, son tipos de sólo lectura y se le debe asignar un valor en el
+      momento de su declaración. Son referencias inmutables, pero sus valores no
+      necesariamente.
+    </p>
 
-    <hr>
-<pre>     const DIEZ = 10;
+    <hr />
+    <pre>
+     const DIEZ = 10;
             DIEZ = 5;
-            console.log(DIEZ); // Imprime Uncaught TypeError: Assignment to constant variable</pre>
+            console.log(DIEZ); // Imprime Uncaught TypeError: Assignment to constant variable</pre
+    >
 
-<p>Aca el error nos dice que "NO SE PUEDE REASIGNAR UNA CONSTANTE" como declaramos la constante en 10, no le podemos decir que despues vale 5, justamente porque es una constante y las constantes no varian.</p>
+    <p>
+      Aca el error nos dice que "NO SE PUEDE REASIGNAR UNA CONSTANTE" como
+      declaramos la constante en 10, no le podemos decir que despues vale 5,
+      justamente porque es una constante y las constantes no varian.
+    </p>
 
-<script>
-            const DIEZ = 10;
-              DIEZ = 5;
-              console.log(DIEZ); // Imprime Uncaught TypeError: Assignment to constant variable
-</script>
-<hr>
+    <script>
+      const DIEZ = 10;
+      DIEZ = 5;
+      console.log(DIEZ); // Imprime Uncaught TypeError: Assignment to constant variable
+    </script>
+    <hr />
 
-<pre>     const hola = 'hola mundo';
+    <pre>
+     const hola = 'hola mundo';
             hola = 'hola mundo'; // Imprime Uncaught TypeError: Assignment to constant variable
-</pre>
+</pre
+    >
 
-<p>En este ejemplo, declaramos la variable "hola" y le asignamos "hola mundo", pero despues al poner hola =, JavaScript lo toma como una reasignacion y sale el error, aunque como se ve la reasignacion es la misma declarada en la constante, pero no se lee la reasignacion, sino que se lee que se quiere hacer una reasignacion nada mas.</p>
+    <p>
+      En este ejemplo, declaramos la variable "hola" y le asignamos "hola
+      mundo", pero despues al poner hola =, JavaScript lo toma como una
+      reasignacion y sale el error, aunque como se ve la reasignacion es la
+      misma declarada en la constante, pero no se lee la reasignacion, sino que
+      se lee que se quiere hacer una reasignacion nada mas.
+    </p>
 
-<script>
-  const hola = 'hola mundo';
-    hola = 'hola mundo'; // Imprime Uncaught TypeError: Assignment to constant variable
-</script>
-<hr>
+    <script>
+      const hola = "hola mundo";
+      hola = "hola mundo"; // Imprime Uncaught TypeError: Assignment to constant variable
+    </script>
+    <hr />
 
-<pre>     const PI;
-            PI = 3.141592653589793; //Imprime Missing initializer in const declaration</pre>
+    <pre>
+     const PI;
+            PI = 3.141592653589793; //Imprime Missing initializer in const declaration</pre
+    >
 
-<p>Una de las reglas de las constantes dice que "LAS VARIABLES DECLARADAS CON CONST, DEBEN SER INICIALIZADAS EN EL MISMO MOMENTO DE SU DECLARACION".</p>
-<p>"NO SE PUEDE DECLARLAR LA CONSTANTE PRIMERO Y ASIGNARLE UN VALOR DESPUES, COMO SI SE PUEDE HACER CON LET O VAR.</p>
-<h4>¿PORQUE ESTA RESTRICCIÓN?</h4>
-<p>CONST fue creada para garantizar que una variable nunca cambie después de su creación</p>
-<p>Si permitiera asignaciones posteriores, perderia su propósito de ser una "constante".</p>
+    <p>
+      Una de las reglas de las constantes dice que "LAS VARIABLES DECLARADAS CON
+      CONST, DEBEN SER INICIALIZADAS EN EL MISMO MOMENTO DE SU DECLARACION".
+    </p>
+    <p>
+      "NO SE PUEDE DECLARLAR LA CONSTANTE PRIMERO Y ASIGNARLE UN VALOR DESPUES,
+      COMO SI SE PUEDE HACER CON LET O VAR.
+    </p>
+    <h4>¿PORQUE ESTA RESTRICCIÓN?</h4>
+    <p>
+      CONST fue creada para garantizar que una variable nunca cambie después de
+      su creación
+    </p>
+    <p>
+      Si permitiera asignaciones posteriores, perderia su propósito de ser una
+      "constante".
+    </p>
 
-<script>
-  const PI; //aca visual studio se queja porque no declare la constante
-    PI = 3.141592653589793; //Imprime Missing initializer in const declaration
-</script>
-<hr>
+    <script>
+      const PI; //aca visual studio se queja porque no declare la constante
+        PI = 3.141592653589793; //Imprime Missing initializer in const declaration
+    </script>
+    <hr />
 
-<pre>     const obj = {};
+    <pre>
+     const obj = {};
             obj.prop = 'x';
             console.log(obj); //Imprime { prop: 'x' }
             obj.prop = 'y';
             console.log(obj); //Imprime { prop: 'y' }
-</pre>
+</pre
+    >
 
-<p>En este ejemplo se declara un objeto vacio {}</p>
-<p><strong>IMPORTANTE</strong>: const solo evita la reasignación de la variable obj, pero no protege las propiedades del objeto. Es decir, obj = nuevo_objeto; nos daria error, pero modificar con obj.prop es valido, porque estamos accediendo a la propiedad del objeto en si.</p>
-<p>Aunque obj es una constante, <strong> sus propiedades pueden ser modificadas, añadidas o eliminadas</strong></p>
-<p>En el ejemplo tenemos dos reasignaciones, pero no a la const sino a su propiedad, por eso vemos que hay 2 cambios</p>
+    <p>En este ejemplo se declara un objeto vacio {}</p>
+    <p>
+      <strong>IMPORTANTE</strong>: const solo evita la reasignación de la
+      variable obj, pero no protege las propiedades del objeto. Es decir, obj =
+      nuevo_objeto; nos daria error, pero modificar con obj.prop es valido,
+      porque estamos accediendo a la propiedad del objeto en si.
+    </p>
+    <p>
+      Aunque obj es una constante,
+      <strong>
+        sus propiedades pueden ser modificadas, añadidas o eliminadas</strong
+      >
+    </p>
+    <p>
+      En el ejemplo tenemos dos reasignaciones, pero no a la const sino a su
+      propiedad, por eso vemos que hay 2 cambios
+    </p>
 
-<script>
-  const obj = {};
-    obj.prop = 'x';
-    console.log(obj); //Imprime { prop: 'x' }
-    obj.prop = 'y';
-    console.log(obj); //Imprime { prop: 'y' }
-</script>
-<hr>
+    <script>
+      const obj = {};
+      obj.prop = "x";
+      console.log(obj); //Imprime { prop: 'x' }
+      obj.prop = "y";
+      console.log(obj); //Imprime { prop: 'y' }
+    </script>
+    <hr />
 
-<pre>     const D = document;
+    <pre>
+     const D = document;
             console.log(D); //Imprime el objeto document
             console.log(D.documentElement); //Imprime el elemento &lt;html&gt;
-</pre>
+</pre
+    >
 
-<script>
-  const D = document;
-    console.log(D); //Imprime el objeto document
-    console.log(D.documentElement); //Imprime el elemento <html>
-</script>
-<hr>
+    <script>
+      const D = document;
+      console.log(D); //Imprime el objeto document
+      console.log(D.documentElement); //Imprime el elemento <html>
+    </script>
+    <hr />
 
     <br /><br /><br />
     <hr />
@@ -256,6 +362,7 @@
     <a href="introduccion.html"><button>INTRODUCCION</button></a>
     <a href="index.html"><button>INICIO</button></a>
     <a href="estructuraDeControl.html"
-      ><button>ESTRUCTURAS DE CONTROL</button></a>
+      ><button>ESTRUCTURAS DE CONTROL</button></a
+    >
   </body>
 </html>

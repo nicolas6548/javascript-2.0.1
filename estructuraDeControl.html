@@ -1,29 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESTRUCTURA CONTROL</title>
-</head>
-<body>
-  <h1>ESTRUCTURA DE CONTROL</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <title>ESTRUCTURA CONTROL</title>
+  </head>
+  <body>
+    <h1>ESTRUCTURA DE CONTROL</h1>
+
+    <ul>
+      <li><a href="">Tipo de operadores</a></li>
+      <li><a href="">Condicionales</a></li>
+      <li><a href="">Ciclos (Loops)</a></li>
+      <li><a href="">Manejo de Errores</a></li>
+      <li><a href="">break y continue</a></li>
+      <li><a href="">Destructuración</a></li>
+      <li><a href="">Objetos Literales</a></li>
+      <li><a href="">Parametros REST y operadores SPREAD</a></li>
+      <li><a href="">Arrow functions (Funciones Flecha)</a></li>
+    </ul>
+    <hr />
+    <h2>TIPO DE OPERADORES</h2>
+    <p>Hay diferentes tipos de operadores</p>
+    <h3>OPERADORES ARITMETICOS</h3>
+    <p>Los operadores aritmmeticos ya los conocemos</p>
+    <ul>
+      <li>SUMA " + "</li>
+      <p>La suma la conocemos todos, igualmente vamos a hacer un pequeño ejemplo</p>
+      <pre>
+        let suma = 1 + 5
+        console.log(suma)
+      </pre>
+      <script>
+        console.log("operador de suma")
+        let suma = 1 + 5
+        console.log(suma)
+      </script>
+      <p>Por consola vamos a ver el resultado que es "6" (si ven la consola en la pagina van a ver todos los resultados de esta pagina, lo mismo en las otras paginas)</p>
+      <li>RESTA " - "</li>
+      <p>Otra vieja conocida.</p>
+      <pre>
+        let resta = 1 - 5
+        console.log(resta)
+      </pre>
+      <script>
+        console.log("operador de resta")
+        let resta = 1 - 5
+        console.log(resta)
+      </script>
+      <p>El resultado de esto obviamente es "-4"</p>
+      <li>MULTIPLICACION " * "</li>
+      <pre>
+        let multiplicacion = 2 * 5
+        console.log(multiplicacion)
+      </pre>
+      <script>
+        console.log("operador de multiplicacion")
+        let multiplicacion = 2 * 5
+        console.log(multiplicacion)
+      </script>
+      <p>Cambiamos el 1 por el 2 para el ejemplo jajajaja, como seguro saben y pueden ver en la consola el resultado de esto es 10</p>
+      <li>DIVISION " / "</li>
+      <pre>
+        let division = 5 / 2
+        console.log(division)
+      </pre>
+      <script>
+        console.log("operador de division")
+        let division = 5 / 2
+        console.log(division)
+      </script>
+      <p>Cambiamos los numeros del ejemplo porque nos va a servir para el proximo caso, 5 dividido 2 es 2,5 pero en el ejemplo que viene vamos a ver otra cosa distinta.</p>
+      <li>MODULO O RESTO " % "</li>
+      <pre>
+        let modulo = 5 % 2
+        console.log(modulo)
+      </pre>
+      <script>
+        console.log("operador de modulo o resto")
+        let modulo = 5 % 2
+        console.log(modulo)
+      </script>
+      <p>Pero que es esto? porque dio 1?? porque el simbolo de porcentaje entre dos numeros me da como resultado el modulo o resto de una division, en este caso si divido 5 entre 2 y no le agrego una coma para llegar a un resultado exacto, justamente el resultado seria 2 y me sobran 1, ese 1 es el modulo o resto, esto es muy util cuando estoy buscando numeros pares o impares por ejemplo</p>
+      <li>PARENTESIS " () "</li>
+      <pre>
+        let parentesis = 5 + 8 * 3 - 4
+        console.log(parentesis
+      </pre>
+      <script>
+        console.log("operador de parentesis")
+        let parentesis = 5 + 8 * 3 - 4
+        console.log(parentesis)
+      </script>
+      <p>Me fallo el ejemplo? no, JavaScript me separa automaticamente entre suma y resta con multiplicacion y division. Vamos a ver otro ejemplo para que quede mas claro.</p>
+      <pre>
+        let parentesis2 = 5 + (8 * 3) - 4
+        console.log(parentesis2)
+      </pre>
+      <script>
+        let parentesis2 = 5 + (8 * 3) - 4
+        console.log(parentesis2)
+      </script>
+      <p>Si vemos los resultados son los mismos, pero cambio en el segundo ejemplo que pusimos los parentesis, y JavaScript sigue las reglas de las matematicas donde dice que: PRIMERO SE HACEN LAS MULTIPLICACIONES Y DIVISIONES Y DESPUES LAS SUMAS Y RESTAS.</p>
+    </ul>
+<hr>
+
+    <h3>OPERADORES RELACIONALES</h3>
 
   <ul>
-    <li><a href="">Tipo de operadores</a></li>
-    <li><a href="">Condicionales</a></li>
-    <li><a href="">Ciclos (Loops)</a></li>
-    <li><a href="">Manejo de Errores</a></li>
-    <li><a href="">break y continue</a></li>
-    <li><a href="">Destructuración</a></li>
-    <li><a href="">Objetos Literales</a></li>
-    <li><a href="">Parametros REST y operadores SPREAD</a></li>
-    <li><a href="">Arrow functions (Funciones Flecha)</a></li>
-  </ul>  
+    <li>OPERADOR MAYOR QUE " &gt; "</li>
+    <p>Un ejemplo del operador <strong>MAYOR</strong> que puede ser el siguiente:</p>
+    <pre>
+      let mayor = 5 > 2
+      console.log(mayor
+    </pre>
+    <script>
+      console.log("operador mayor")
+      let mayor = 5 > 2
+      console.log(mayor)
+    </script>
+    <p>Esto nos va a devolver un valor  <strong>BOOLEANO</strong>, en este caso <strong>TRUE</strong></p>
+    <li>OPERADOR MAYOR/IGUAL QUE " &gt;= "</li>
+    <p>Ahora vamos a ver el mismo ejemplo con el operador de <strong>MAYOR o IGUAL</strong></p>
+    <pre>
+      let mayorIgual = 5 >= 7
+      let mayor_igual = 5 >= 5
+      let mayorOigual = 5 >= 2
+      console.log(mayorIgual)
+      console.log(mayor_igual)
+      console.log(mayorOigual)
+    </pre>
+    <script>
+      console.log("operador mayor o igual")
+      let mayorIgual = 5 >= 7
+      let mayor_igual = 5 >= 5
+      let mayorOigual = 5 >= 2
+      console.log(mayorIgual)
+      console.log(mayor_igual)
+      console.log(mayorOigual)
+    </script>
+    <p>El resultado del ejemplo es <strong>FALSE</strong> el primero, porque 5 no es mayor ni igual a 7, en el segundo y tercer ejemplo nos da <strong>TRUE</strong> porque efectivamente 5 es igual a 5 y 5 es mayor a 2</p>
+    <li>OPERADOR MENOR QUE " &lt; "</li>
+    <pre>
+      let menor = 5 &lt; 2
+      let menor2 = 5 &lt; 10
+      console.log(menor)
+      console.log(menor2)
+    </pre>
+    <script>
+      console.log("operador menor")
+      let menor = 5 < 2
+      let menor2 = 5 < 10
+      console.log(menor)
+      console.log(menor2)
+    </script>
+    <p>Como hicimos anteriormente, primero comparamos si 5 es menor que 2 y obviamente nos da <strong>FALSE</strong>, luego comparamos si 5 es menor que 10 y que nos va a dar? <strong>TRUE</strong> obviamente jajajajjaa</p>
+    <li>OPERADOR MENOR/IGUAL QUE " &lt;= "</li>
+    <pre>
+      let menorIgual = 5 &lt;= 7
+      let menor_igual = 5 &lt;= 5
+      let menorOigual = 5 &lt;= 2
+      console.log(menorIgual)
+      console.log(menor_igual)
+      console.log(menorOigual)
+    </pre>
+    <script>
+      console.log("operador menor o igual")
+      let menorIgual = 5 <= 7
+      let menor_igual = 5 <= 5
+      let menorOigual = 5 <= 2
+      console.log(menorIgual)
+      console.log(menor_igual)
+      console.log(menorOigual)
+    </script>
+    <p>Como veran reciclamos codigo jajajjaja, en el primero y segundo ejemplo nos da <strong>TRUE</strong> porque 5 es menor a 7 y 5 es igual a 5, pero en el tercer ejemplo nos da <strong>FALSE</strong> porque 5 nos es menor a 2 obviamente</p>
+    <li>OPERADOR DE IGUALDAD " == "</li>
+    <pre>
+      let igual = 5 == 5
+      let igual2 = "7" == 7
+      console.log(igual)
+      console.log(igual2)
+    </pre>
+    <script>
+      console.log("operador de igualdad")
+      let igual = 5 == 5
+      let igual2 = "7" == 7
+      console.log(igual)
+      console.log(igual2)
+    </script>
+    <p>En los ejemplos de igualdad comparamos 5 con 5 nos da <strong>TRUE</strong> y en el segundo <strong>TRUE</strong> porque "7" mas alla que sea un string JavaScript comopara con el 7 y como son valores iguales sale <strong>TRUE</strong>. <strong>EL == COMPRUEBA SI LOS VALORES SON IGUALES, NO LOS TIPOS DE DATOS</strong></p>
+    <li>OPERADOR DE DESIGUALDAD " != "</li>
+    <pre>
+      let desigualdad = 5 != 5
+      let desigualdad2 = 5 != 7
+      console.log(desigualdad)
+      console.log(desigualdad2)
+    </pre>
+    <script>
+      console.log("operador de desigualdad")
+      let desigualdad = 5 != 5
+      let desigualdad2 = 5 != 7
+      console.log(desigualdad)
+      console.log(desigualdad2)
+    </script>
+    <p>En la desigualdad vemos un <strong>FALSE</strong> al principio porque 5 es igual a 5 y un <strong>TRUE</strong> porque 5 es distinto a 7</p>
+    <li>OPERADOR DE IDENTIDAD " === "</li>
+    <pre>
+      let identidad = "5" === 5
+      let identidad2 = 5 === 5
+      console.log(identidad)
+      console.log(identidad2)
+    </pre>
+    <script>
+      console.log("operador de identidad")
+      let identidad = "5" === 5
+      let identidad2 = 5 === 5
+      console.log(identidad)
+      console.log(identidad2)
+    </script>
+    <p>Porque nos dio <strong>FALSE</strong> el primer ejemplo? porque coinciden en el valor, pero no en el tipo de dato, uno es <strong>STRING</strong> y el otro un <strong>NUMBER</strong>, pero en el segundo ejemplo el resultado es <strong>TRUE</strong> porque coincide el valor y tipo de dato</p>
 
-  <br /><br /><br />
-    <a href="tipo_de_datos.html"><button>TIPPOS DE DATOS</button></a>
+    <li>OPERADOR NO IDÉNTICO " !== "</li>
+    <pre>
+      let noIdentico = 5 !== 5
+      let noIdentico2 = 7 !== 5
+      let noIdentico3 = "5" !== 5
+      console.log(noIdentico)
+      console.log(noIdentico2)
+      console.log(noIdentico3)
+    </pre>
+    <script>
+      console.log("operador no identico")
+      let noIdentico = 5 !== 5
+      let noIdentico2 = 7 !== 5
+      let noIdentico3 = "5" !== 5
+      console.log(noIdentico)
+      console.log(noIdentico2)
+      console.log(noIdentico3)
+    </script>
+    <p>El operador !== coprueba si el valor y tipo de dato de a no es igual al valor y tipo de dato de b, en el primer ejemplo el resultado es <strong>FALSE</strong> porque 5 es igual a 5, en valor y tipo de dato, en el segundo nos da como resultado <strong>TRUE</strong> porque 7 no es igual a 5 lo mismo que el ejemplo 3</p>
+  </ul>
+
+    <hr />
+    <h2>CONDICINALES</h2>
+    <hr />
+    <h2>CICLOS (LOOPS)</h2>
+    <hr />
+    <h2>MANEJO DE ERRORES</h2>
+    <hr />
+    <h2>BREAK Y CONTINUE</h2>
+    <hr />
+    <h2>DESTRUCTURACIÓN</h2>
+    <hr />
+    <h2>OBJETOS LITERALES</h2>
+    <hr />
+    <h2>PARAMETROS REST Y OPEPERADORES SPREAD</h2>
+    <hr />
+    <h2>ARROW FUNCTIONS (FUNCIONES FLECHA)</h2>
+
+    <br /><br /><br />
+    <a href="tipo_de_datos.html"><button>TIPOS DE DATOS</button></a>
     <a href="index.html"><button>INICIO</button></a>
-    <a href="orientadaAObjetos.html"
-      ><button>POO</button></a>
-</body>
+    <a href="orientadaAObjetos.html"><button>POO</button></a>
+  </body>
 </html>
