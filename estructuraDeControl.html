@@ -238,9 +238,113 @@
       console.log(noIdentico)
       console.log(noIdentico2)
       console.log(noIdentico3)
+      
     </script>
     <p>El operador !== coprueba si el valor y tipo de dato de a no es igual al valor y tipo de dato de b, en el primer ejemplo el resultado es <strong>FALSE</strong> porque 5 es igual a 5, en valor y tipo de dato, en el segundo nos da como resultado <strong>TRUE</strong> porque 7 no es igual a 5 lo mismo que el ejemplo 3</p>
   </ul>
+<hr>
+<hr>
+<hr>
+  <h4>Vamos a aclarar algo antes de seguir.</h4>
+  <ul>
+    <li>El operador = es de asignacion</li>
+    <li>El operador == compara si el valor es igual</li>
+    <li>el operador === compara si el valor y el tipo son iguales</li>
+    <p>veamos un ejemplo para entenderlo mejor</p>
+    <pre>
+      console.log(a = 5)
+
+      console.log(5 == 5)
+      console.log("5" == 5)
+      console.log(0 == false)
+
+      console.log(5 === 5)
+      console.log("5" === 5)
+      console.log(0 === false)
+    </pre>
+    <script>      
+      console.log("operador de asignacion")
+      console.log(a = 5)
+      console.log("ahora el operador ==")
+      console.log(5 == 5)
+      console.log("5" == 5)
+      console.log(0 == false)
+      console.log("ahora el operador ===")
+      console.log(5 === 5)
+      console.log("5" === 5)
+      console.log(0 === false)
+    </script>
+    <p>El de asignacion le asigna un valor a algo, lo que esta del lado izquierdo toma o recibe el valor que esta a la derecha del igual</p>
+    <p>El operador de comparacion compara el valor de la izquierda con el de la derecha, veamos que los 3 valores dan <strong>TRUE</strong>, en el tercer caso, o es lo mismo que false, por eso da true</p>
+    <p>Y el operador de identicoo solo tenemos <strong>TRUE</strong> el primer console log, porque 5 en valor y tipo es igual al otro 5, pero en el segundo caso es un string contra un numero y en el tercer caso 0 no es lo mismo que false</p>
+  </ul>
+
+  <h3>OPERADORES DE INCREMENTO / DECREMENTO</h3>
+
+  <ul>
+    <li>OPERADOR " += "</li>
+    <li>OPERADOR " -= "</li>
+    <li>OPERADOR " *= "</li>
+    <li>OPERADOR " /= "</li>
+  </ul>
+  <pre>
+    let incremento = 4
+    let incremento1 = 4
+    let incremento2 = 4
+    let incremento3 = 4
+    console.log(incremento += 2)
+    console.log(incremento1 -= 2)
+    console.log(incremento2 *= 2)
+    console.log(incremento3 /= 2)
+  </pre>
+  <script>
+    console.log("operadoores de incremento / decremento")
+    let incremento = 4
+    let incremento1 = 4
+    let incremento2 = 4
+    let incremento3 = 4
+    console.log(incremento += 2)
+    console.log(incremento1 -= 2)
+    console.log(incremento2 *= 2)
+    console.log(incremento3 /= 2)    
+  </script>
+
+  <p><strong>EXPLICACION</strong>: se hicieron 4 variables porque? eso es tarea, hagan una sola variable y vean los resultados, despues hagan como el ejemplo o vean la consola y analicen el resultado</p>
+
+  <h3>OPERADORES DE UNARIOS</h3>
+
+  <ul>
+    <li>OPERADOR " ++ "</li>
+    <li>OPERADOR " -- "</li>
+  </ul>
+
+  <pre>
+    OPERADOR UNARIO SUMANDO
+    let unario = 4
+    console.log(++unario)
+    console.log(unario++)
+    console.log(unario)
+    OPERADOR UNARIO RESTANDO
+    let unario2 = 4
+    console.log(--unario2)
+    console.log(unario2--)
+    console.log(unario2)
+  </pre>
+  <script>
+    console.log("operador unario sumando")
+    let unario = 4
+    console.log(++unario)
+    console.log(unario++)
+    console.log(unario)
+    console.log("operador unario resta")
+    let unario2 = 4
+    console.log(--unario2)
+    console.log(unario2--)
+    console.log(unario2)
+  </script>
+
+  <p>No es lo mismo poner el operador antes de la variable que despues de la variable, por eso puse 3 ejemplos de cada uno, ahora esta en cada uno que vea esto analizar el porque la diferencia (tampoco les voy a hacer todo, para eso esta el chat gpt jajajajajjaja)</p>
+
 
     <hr />
     <h2>CONDICINALES</h2>
