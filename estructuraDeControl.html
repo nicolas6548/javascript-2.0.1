@@ -7,11 +7,43 @@
     <title>ESTRUCTURA CONTROL</title>
   </head>
   <body>
-    <h1>ESTRUCTURA DE CONTROL</h1>
+    <h1 id="inicio">ESTRUCTURA DE CONTROL</h1#>
 
     <ul>
-      <li><a href="">Tipo de operadores</a></li>
-      <li><a href="">Condicionales</a></li>
+      <li><a href="#tipo de operadores">Tipo de operadores</a>
+      <ul>
+        <li id="aritmeticos"><a href="#operadores aritmeticos">OPERADORES ARITMETICOS</a>
+        <ul>
+          <li><a href="#suma">SUMA</a></li>
+          <li><a href="#resta">RESTA</a></li>
+          <li><a href="#division">DIVISION</a></li>
+          <li><a href="#multiplicacion">MULTIPLICACION</a></li>
+          <li><a href="#modulo">MODULO O RESTO</a></li>
+          <li><a href="#parentesis">PARENTESIS</a></li>
+        </ul></li>
+        <li id="relacionales"><a href="#operadores relacionales">OPERADORES RELACIONALES</a>
+        <ul>
+          <li><a href="#mayor que">MAYOR QUE</a></li>
+          <li><a href="#mayor o igual">MAYOR O IGUAL</a></li>
+          <li><a href="#menor que">MENOR QUE</a></li>
+          <li><a href="#menor o igual">MENOR O IGUAL</a></li>
+          <li><a href="#igualdad">IGUALDAD</a></li>
+          <li><a href="#desigualdad">DESIGUALDAD</a></li>
+          <li><a href="#identidad">IDENTIDAD</a></li>
+          <li><a href="#no identico">NO IDENTICO</a></li>
+        </ul></li>
+        <li id="incremento"><a href="#operadores incremento/decremento">OPERADORES INCREMETO/DECREMENTO</a></li>
+        <li><a href="#operadores unarios">OPERADORES UNARIOS</a></li>
+        <li><a href="#operadores logicos">OPERADORES LOGICOS</a></li>
+      </ul></li>
+      <li id="condicionales"><a href="">Condicionales</a>
+      <ul>
+        <li><a href="#if">IF</a></li>
+        <li><a href="#if-else">IF-ELSE</a></li>
+        <li><a href="#if-else if-else">IF-ELSE IF-ELSE</a></li>
+        <li><a href="#ternario">TERNARIO</a></li>
+        <li><a href="#switch">SWITCH</a></li>
+      </ul></li>
       <li><a href="">Ciclos (Loops)</a></li>
       <li><a href="">Manejo de Errores</a></li>
       <li><a href="">break y continue</a></li>
@@ -20,13 +52,19 @@
       <li><a href="">Parametros REST y operadores SPREAD</a></li>
       <li><a href="">Arrow functions (Funciones Flecha)</a></li>
     </ul>
+
+
     <hr />
-    <h2>TIPO DE OPERADORES</h2>
+    <h2 id="tipo de operadores">TIPO DE OPERADORES</h2>
     <p>Hay diferentes tipos de operadores</p>
-    <h3>OPERADORES ARITMETICOS</h3>
+    
+    
+    <h3 id="operadores aritmeticos">OPERADORES ARITMETICOS</h3>
     <p>Los operadores aritmmeticos ya los conocemos</p>
+    
+    
     <ul>
-      <li>SUMA " + "</li>
+      <li id="suma">SUMA " + "</li>
       <p>La suma la conocemos todos, igualmente vamos a hacer un pequeño ejemplo</p>
       <pre>
         let suma = 1 + 5
@@ -38,7 +76,10 @@
         console.log(suma)
       </script>
       <p>Por consola vamos a ver el resultado que es "6" (si ven la consola en la pagina van a ver todos los resultados de esta pagina, lo mismo en las otras paginas)</p>
-      <li>RESTA " - "</li>
+      <button><a href="#aritmeticos">VOLVER ARRIBA</a></button>
+
+
+      <li id="resta">RESTA " - "</li>
       <p>Otra vieja conocida.</p>
       <pre>
         let resta = 1 - 5
@@ -50,7 +91,10 @@
         console.log(resta)
       </script>
       <p>El resultado de esto obviamente es "-4"</p>
-      <li>MULTIPLICACION " * "</li>
+      <button><a href="#aritmeticos">VOLVER ARRIBA</a></button>
+
+
+      <li id="multiplicacion">MULTIPLICACION " * "</li>
       <pre>
         let multiplicacion = 2 * 5
         console.log(multiplicacion)
@@ -61,7 +105,10 @@
         console.log(multiplicacion)
       </script>
       <p>Cambiamos el 1 por el 2 para el ejemplo jajajaja, como seguro saben y pueden ver en la consola el resultado de esto es 10</p>
-      <li>DIVISION " / "</li>
+      <button><a href="#aritmeticos">VOLVER ARRIBA</a></button>
+
+
+      <li id="division">DIVISION " / "</li>
       <pre>
         let division = 5 / 2
         console.log(division)
@@ -72,7 +119,10 @@
         console.log(division)
       </script>
       <p>Cambiamos los numeros del ejemplo porque nos va a servir para el proximo caso, 5 dividido 2 es 2,5 pero en el ejemplo que viene vamos a ver otra cosa distinta.</p>
-      <li>MODULO O RESTO " % "</li>
+      <button><a href="#aritmeticos">VOLVER ARRIBA</a></button>
+
+
+      <li id="modulo">MODULO O RESTO " % "</li>
       <pre>
         let modulo = 5 % 2
         console.log(modulo)
@@ -83,14 +133,17 @@
         console.log(modulo)
       </script>
       <p>Pero que es esto? porque dio 1?? porque el simbolo de porcentaje entre dos numeros me da como resultado el modulo o resto de una division, en este caso si divido 5 entre 2 y no le agrego una coma para llegar a un resultado exacto, justamente el resultado seria 2 y me sobran 1, ese 1 es el modulo o resto, esto es muy util cuando estoy buscando numeros pares o impares por ejemplo</p>
-      <li>PARENTESIS " () "</li>
+      <button><a href="#aritmeticos">VOLVER ARRIBA</a></button>
+
+
+      <li id="parentesis">PARENTESIS " () "</li>
       <pre>
-        let parentesis = 5 + 8 * 3 - 4
+        let parentesis = 5 + 8 * 3 - 3
         console.log(parentesis
       </pre>
       <script>
         console.log("operador de parentesis")
-        let parentesis = 5 + 8 * 3 - 4
+        let parentesis = 5 + 8 * 3 - 3
         console.log(parentesis)
       </script>
       <p>Me fallo el ejemplo? no, JavaScript me separa automaticamente entre suma y resta con multiplicacion y division. Vamos a ver otro ejemplo para que quede mas claro.</p>
@@ -104,12 +157,15 @@
       </script>
       <p>Si vemos los resultados son los mismos, pero cambio en el segundo ejemplo que pusimos los parentesis, y JavaScript sigue las reglas de las matematicas donde dice que: PRIMERO SE HACEN LAS MULTIPLICACIONES Y DIVISIONES Y DESPUES LAS SUMAS Y RESTAS.</p>
     </ul>
+    <button><a href="#aritmeticos">VOLVER ARRIBA</a></button>
+
+
 <hr>
 
-    <h3>OPERADORES RELACIONALES</h3>
+    <h3 id="operadores relacionales">OPERADORES RELACIONALES</h3>
 
   <ul>
-    <li>OPERADOR MAYOR QUE " &gt; "</li>
+    <li id="mayor que">OPERADOR MAYOR QUE " &gt; "</li>
     <p>Un ejemplo del operador <strong>MAYOR</strong> que puede ser el siguiente:</p>
     <pre>
       let mayor = 5 > 2
@@ -121,7 +177,10 @@
       console.log(mayor)
     </script>
     <p>Esto nos va a devolver un valor  <strong>BOOLEANO</strong>, en este caso <strong>TRUE</strong></p>
-    <li>OPERADOR MAYOR/IGUAL QUE " &gt;= "</li>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+
+
+    <li id="mayor o igual">OPERADOR MAYOR/IGUAL QUE " &gt;= "</li>
     <p>Ahora vamos a ver el mismo ejemplo con el operador de <strong>MAYOR o IGUAL</strong></p>
     <pre>
       let mayorIgual = 5 >= 7
@@ -141,7 +200,10 @@
       console.log(mayorOigual)
     </script>
     <p>El resultado del ejemplo es <strong>FALSE</strong> el primero, porque 5 no es mayor ni igual a 7, en el segundo y tercer ejemplo nos da <strong>TRUE</strong> porque efectivamente 5 es igual a 5 y 5 es mayor a 2</p>
-    <li>OPERADOR MENOR QUE " &lt; "</li>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+
+
+    <li id="menor que">OPERADOR MENOR QUE " &lt; "</li>
     <pre>
       let menor = 5 &lt; 2
       let menor2 = 5 &lt; 10
@@ -156,7 +218,10 @@
       console.log(menor2)
     </script>
     <p>Como hicimos anteriormente, primero comparamos si 5 es menor que 2 y obviamente nos da <strong>FALSE</strong>, luego comparamos si 5 es menor que 10 y que nos va a dar? <strong>TRUE</strong> obviamente jajajajjaa</p>
-    <li>OPERADOR MENOR/IGUAL QUE " &lt;= "</li>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+    
+    
+    <li id="menor o igual">OPERADOR MENOR/IGUAL QUE " &lt;= "</li>
     <pre>
       let menorIgual = 5 &lt;= 7
       let menor_igual = 5 &lt;= 5
@@ -175,7 +240,10 @@
       console.log(menorOigual)
     </script>
     <p>Como veran reciclamos codigo jajajjaja, en el primero y segundo ejemplo nos da <strong>TRUE</strong> porque 5 es menor a 7 y 5 es igual a 5, pero en el tercer ejemplo nos da <strong>FALSE</strong> porque 5 nos es menor a 2 obviamente</p>
-    <li>OPERADOR DE IGUALDAD " == "</li>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+
+
+    <li id="igualdad">OPERADOR DE IGUALDAD " == "</li>
     <pre>
       let igual = 5 == 5
       let igual2 = "7" == 7
@@ -188,9 +256,13 @@
       let igual2 = "7" == 7
       console.log(igual)
       console.log(igual2)
+      
     </script>
     <p>En los ejemplos de igualdad comparamos 5 con 5 nos da <strong>TRUE</strong> y en el segundo <strong>TRUE</strong> porque "7" mas alla que sea un string JavaScript comopara con el 7 y como son valores iguales sale <strong>TRUE</strong>. <strong>EL == COMPRUEBA SI LOS VALORES SON IGUALES, NO LOS TIPOS DE DATOS</strong></p>
-    <li>OPERADOR DE DESIGUALDAD " != "</li>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+
+
+    <li id="desigualdad">OPERADOR DE DESIGUALDAD " != "</li>
     <pre>
       let desigualdad = 5 != 5
       let desigualdad2 = 5 != 7
@@ -205,23 +277,28 @@
       console.log(desigualdad2)
     </script>
     <p>En la desigualdad vemos un <strong>FALSE</strong> al principio porque 5 es igual a 5 y un <strong>TRUE</strong> porque 5 es distinto a 7</p>
-    <li>OPERADOR DE IDENTIDAD " === "</li>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+
+
+    <li id="identidad">OPERADOR DE IDENTIDAD " === "</li>
     <pre>
-      let identidad = "5" === 5
+      let identidad = "7" === 7
       let identidad2 = 5 === 5
       console.log(identidad)
       console.log(identidad2)
     </pre>
     <script>
       console.log("operador de identidad")
-      let identidad = "5" === 5
+      let identidad = "7" === 7
       let identidad2 = 5 === 5
       console.log(identidad)
       console.log(identidad2)
     </script>
     <p>Porque nos dio <strong>FALSE</strong> el primer ejemplo? porque coinciden en el valor, pero no en el tipo de dato, uno es <strong>STRING</strong> y el otro un <strong>NUMBER</strong>, pero en el segundo ejemplo el resultado es <strong>TRUE</strong> porque coincide el valor y tipo de dato</p>
+    <button><a href="#relacionales">VOLVER ARRIBA</a></button>
 
-    <li>OPERADOR NO IDÉNTICO " !== "</li>
+    
+    <li id="no identico">OPERADOR NO IDÉNTICO " !== "</li>
     <pre>
       let noIdentico = 5 !== 5
       let noIdentico2 = 7 !== 5
@@ -242,8 +319,9 @@
     </script>
     <p>El operador !== coprueba si el valor y tipo de dato de a no es igual al valor y tipo de dato de b, en el primer ejemplo el resultado es <strong>FALSE</strong> porque 5 es igual a 5, en valor y tipo de dato, en el segundo nos da como resultado <strong>TRUE</strong> porque 7 no es igual a 5 lo mismo que el ejemplo 3</p>
   </ul>
-<hr>
-<hr>
+  <button><a href="#relacionales">VOLVER ARRIBA</a></button>
+
+
 <hr>
   <h4>Vamos a aclarar algo antes de seguir.</h4>
   <ul>
@@ -279,7 +357,9 @@
     <p>Y el operador de identicoo solo tenemos <strong>TRUE</strong> el primer console log, porque 5 en valor y tipo es igual al otro 5, pero en el segundo caso es un string contra un numero y en el tercer caso 0 no es lo mismo que false</p>
   </ul>
 
-  <h3>OPERADORES DE INCREMENTO / DECREMENTO</h3>
+
+  <hr>
+  <h3 id="operadores incremento/decremento">OPERADORES DE INCREMENTO / DECREMENTO</h3>
 
   <ul>
     <li>OPERADOR " += "</li>
@@ -310,8 +390,10 @@
   </script>
 
   <p><strong>EXPLICACION</strong>: se hicieron 4 variables porque? eso es tarea, hagan una sola variable y vean los resultados, despues hagan como el ejemplo o vean la consola y analicen el resultado</p>
+  <button><a href="#incremento">VOLVER ARRIBA</a></button>
 
-  <h3>OPERADORES DE UNARIOS</h3>
+
+  <h3 id="operadores unarios">OPERADORES DE UNARIOS</h3>
 
   <ul>
     <li>OPERADOR " ++ "</li>
@@ -344,12 +426,342 @@
   </script>
 
   <p>No es lo mismo poner el operador antes de la variable que despues de la variable, por eso puse 3 ejemplos de cada uno, ahora esta en cada uno que vea esto analizar el porque la diferencia (tampoco les voy a hacer todo, para eso esta el chat gpt jajajajajjaja)</p>
+  <button><a href="#incremento">VOLVER ARRIBA</a></button>
+
+
+  <h3 id="operadores logicos">OPERADORES LOGICOS</h3>
+
+  <ul>
+    <li>! Not</li>
+    <li>|| Or</li>
+    <li>&& And</li>
+  </ul>
+  <p>El operador ! Not o negacion. <strong>NIEGA</strong>, es decir, lo que es verdadero lo vuelve falso y lo que es falso lo vuelve verdadero</p>
+  <pre>
+    console.log(true)
+    console.log(!true)
+  </pre>
+  <script>
+    console.log("operador ! negacion")
+    console.log(true)
+    console.log(!true)
+  </script>
+  <p>Como se ve por consola, el primer console.log es <strong>TRUE</strong>, pero el segundo que esta negado es <strong>FALSE</strong>.</p>
+
+  <pre>
+    console.log(5 === 5) || ("5" === 5)
+    console.log(5 === 6) || (true === false)
+  </pre>
+  <script>
+    console.log("operador || or")
+    console.log(5 === 5) || ("5" === 5)
+    console.log(5 === 6) || (true === false)
+  </script>
+  <p>El operador || or, compara las condiciones, y si una de ellas es verdadera nos devuelve <strong>TRUE</strong>, y como en el segundo ejemplo vemos que las dos condiciones son falsas nos devuelve <strong>FALSE</strong> </p>
+
+  <pre>
+    console.log((5 === 5) && ( "auto" === "auto"))
+    console.log((5 === 5) && (true === false))
+  </pre>
+  <script>
+    console.log("operador && and")
+    console.log((5 === 5) && ( "auto" === "auto"))
+    console.log((5 === 5) && (true === false))
+  </script>
+  <p>El operador && Y, compara las dos condiciones y ambas tienen que ser verdaderas, como en el ejemplo 1, pero si una de ellas es falsa el resultado es <strong>FALSE</strong></p>
+  <button><a href="#incremento">VOLVER ARRIBA</a></button>
 
 
     <hr />
-    <h2>CONDICINALES</h2>
-    <hr />
+    <h2 id="condicionales">CONDICINALES</h2>
+    <p>Al escribir un programa, necesitamos establecer <strong>condiciones</strong> o <strong>decisiones</strong>, donde buscamos distintos resultados, si se cumple una determinada condicion se realiza la <strong>acción A</strong>, pero si no se cumple se realiza la <strong>acción B</strong></p>
+
+
+    <h3 id="if"><strong>IF</strong></h3>
+    
+    <pre>
+      let nota = 6
+      console.log("Termine mi parcial")
+
+      // Condicional if
+      if (nota >= 5){
+        console.log("¡ESTOY APROBADO!")
+      }
+
+      let nota2 = 4
+      console.log("Termine mi parcial")
+
+      // Condicional if
+      if (nota2 >= 5){
+        console.log("¡ESTOY APROBADO!")
+      }
+    </pre>
+    <script>
+      console.log("CONDICIONALES IF")
+      let nota = 6
+      console.log("Termine mi parcial")
+
+      // Condicional if
+      if (nota >= 5){
+        console.log("¡ESTOY APROBADO!")
+      }
+
+      let nota2 = 4
+      console.log("Termine mi parcial")
+
+      // Condicional if
+      if (nota2 >= 5){
+        console.log("¡ESTOY APROBADO!")
+      }
+    </script>
+    <p>En el ejemplo vemos que tengoo una nota y en la condicion (el if) nos preguntamos si la nota es mayor o igual a 5, y si es nos da un resultado, sino no nos dice nada, como el ejemplo de nota2 (obviamente tenemos que ver la consola desde el inspeccionador)</p>
+    <button><a href="#condicionales">VOLVER ARRIBA</a></button>
+
+    
+    <h3 id="if-else"><strong>IF/ELSE</strong></h3>    
+    <p>En este caso, vamos a tener una condicion como el if comun, pero si no se cumple esta condicion (como en el caso anterior con la nota2), podemos decidir que se hace</p>
+
+    <pre>
+      let nota3 = 7
+      console.log("Termine el parcial")
+
+      if(nota3 >= 5){
+        console.log("ESTOY APROBADO")
+      }else{
+        console.log("Tengo que seguir estudiando")
+      }
+
+      let nota4 = 4
+      console.log("Termine el parcial (de nuevo)")
+
+      if(nota4 >= 5){
+        console.log("ESTOY APROBADO")
+      }else{
+        console.log("Tengo que seguir estudiando")
+      }
+    </pre>
+    <script>
+      console.log("CONDICIONAL IF/ELSE")
+      let nota3 = 7
+      console.log("Termine el parcial")
+
+      if(nota3 >= 5){
+        console.log("ESTOY APROBADO")
+      }else{
+        console.log("Tengo que seguir estudiando")
+      }
+
+      let nota4 = 4
+      console.log("Termine el parcial (de nuevo)")
+
+      if(nota4 >= 5){
+        console.log("ESTOY APROBADO")
+      }else{
+        console.log("Tengo que seguir estudiando")
+      }
+    </script>
+    <p>Como se ven en los ejemplos, en nota3, al ser la nota mayor que 5, no hace falta que la condicion entre al else, porque ya la valido, en cambio en la segunda opcion, nota4, como la calificacion no llego a la condicion de aprobacion entra al else y lamentablemente <strong>"TIENE QUE SEGUIR ESTUDIANDO"</strong></p>
+    <button><a href="#condicionales">VOLVER ARRIBA</a></button>
+
+    
+    <h3 id="if-else if-else"><strong>IF- ELSE IF-ELSE</strong></h3>    
+    <p>Cuando tenemos mas de 2 opciones usamos if/else anidadas, como se ven en el ejemplo</p>
+
+    <pre>
+      let nota5 = 8
+      console.log("TERMINE EL RECUPERATORIO")
+
+      if(nota5 < 5){
+        calificacion = "NI EL RECUPERATORIO PASAS?"
+      }else if(nota5 < 6){
+        calificacion = "SUFICIENTE PARA APROBAR"
+      }else if(nota5 = 8){
+        calificacion = "APROBADO"
+      }else if(nota5 = 9){
+        calificacion = "MUY BUEN PARCIAL"
+      }else {
+        calificacion = "EXELENTE"
+      }
+      console.log("Mi calificacion es: ", calificacion)
+    </pre>
+    <script>
+      console.log("CONDICION IF/ELSE ANIDADAS")
+      let nota5 = 8
+      console.log("TERMINE EL RECUPERATORIO")
+
+      if(nota5 < 5){
+        calificacion = "NI EL RECUPERATORIO PASAS?"
+      }else if(nota5 < 6){
+        calificacion = "SUFICIENTE PARA APROBAR"
+      }else if(nota5 = 8){
+        calificacion = "APROBADO"
+      }else if(nota5 = 9){
+        calificacion = "MUY BUEN PARCIAL"
+      }else {
+        calificacion = "EXELENTE"
+      }
+      console.log("Mi calificacion es: ", calificacion)
+    </script>
+    <p>Como vemos en el ejemplo, tenemos varias opciones para la calificacion, la nota al entrar al if chequea la primer condicion, si esta se aplica lee lo que hace ese if, sino pasa al else if, si esa condicion se aplica se termina el if, sino sigue con el proximo else if, si ninguna se cumple termina en el ultimo else</p>
+    <button><a href="#condicionales">VOLVER ARRIBA</a></button>
+
+    
+    <h3 id="ternario"">OPERADORES TERNARIOS</h3>
+    <p>El operador ternario <strong>?:</strong> equivale a un if/else pero abreviado</p>
+    <p>La sintaxis es la siguiente: <strong>operador ternario (condicion) ?: (si esverdadero hace esto) : (si es falsa hace esto otro)</strong>, vamos a ver un ejemplo</p>
+
+    <pre>
+      let hora = 11
+      let comemos = (hora > 12) ? "son mas de las 12, VAMOS A COMER": "TODAVIA ES TEMPRANO, TANTA HAMBRE VAS A TENER?"
+      console.log(comemos)
+
+      let hora2 = 15
+      let comemos2 = (hora2 > 12) ? "son mas de las 12, VAMOS A COMER": "TODAVIA ES TEMPRANO, TANTA HAMBRE VAS A TENER?"
+      console.log(comemos2)
+    </pre>
+    <script>
+      console.log("OPERADOR TERNARIO")
+      let hora = 11
+      let comemos = (hora > 12) ? "son mas de las 12, VAMOS A COMER": "TODAVIA ES TEMPRANO, TANTA HAMBRE VAS A TENER?"
+      console.log(comemos)
+      console.log("OTRA OPCION")
+      let hora2 = 15
+      let comemos2 = (hora2 > 12) ? "son mas de las 12, VAMOS A COMER": "TODAVIA ES TEMPRANO, TANTA HAMBRE VAS A TENER?"
+      console.log(comemos2)
+    </script>
+    <p>Como se ve todo esta en una sola linea y solo tenemos la condicion de verdadero o falso, si necesitamos mas opciones tenemos que ver un if/else if/else o un swich (ya vamos a llegar)</p>
+    <pre>
+      EN UNA SOLA LINEA
+      let comemos2 = (hora2 > 12) ? "son mas de las 12, VAMOS A COMER": "TODAVIA ES TEMPRANO, TANTA HAMBRE VAS A TENER?"
+
+      EN VARIAS LINEAS
+      let comemos2 = (hora2 > 12) 
+      ? "son mas de las 12, VAMOS A COMER"
+      : "TODAVIA ES TEMPRANO, TANTA HAMBRE VAS A TENER?";
+    </pre>
+    <p>Para una mejor lectura tenemos el siguiente ejemplo que es el mismo que vimos anteriormente pero en lineas distintas, para que uno lo pueda entender mejor, todo el codigo esta en una sola linea, pero como se ve en el ejemplo, si ponemos cada cosa en una linea distinta, vemos la condicion, en la otra linea si es verdadera pasa tal cosa, y en la ultima linea la condicion si es falsa. De esta forma se entiendo en el caso de que no se haya entendido antes.</p>
+    <p><strong>OJO, EL OPERADOR TERNARIO VA EN UNA SOLA LINEA, EL EJEMPLO ES SOLO UN EJEMPLO PARA QUE SE ENTIENDA MEJOR</strong></p>
+    <button><a href="#condicionales">VOLVER ARRIBA</a></button>
+
+
+    <h3 id="switch">OPERADOR SWITCH - CASE</h3>
+
+    <p>En el ejemplo que vimos del <strong>IF ELSE</strong> hay veces que no es muy lindo que digamos y hay mucho codigo repetido. Una alternativa para eso es el <strong>SWITCH</strong></p>
+    <p>Con la estructura de control <strong>SWITCH</strong> poddemos definir casos especificos a realizar cuando la variable expuesta como condición sea igual a los valores que se especifican a continuación mediante cada <strong>CASE</strong></p>
+    <pre>
+      let nota6 = 8;
+      console.log("Termine el parcial. Mi nota fue la siguiente")
+
+      switch (nota6){
+        case 10:
+          calificacion = "\n**EXELENTE**"
+          break;
+        case 9:
+        case 8:
+          calificacion = "\n**MUY BIEN**"
+          break;
+        case 7:
+        case 6:
+          calificacion = "\n**APROBADO**"
+          break;
+        case 5:
+          calificacion = "\n**EN EL PALO**"
+          break;
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+        case 0:
+          calificacion = "**\nAMS (A MARZO SEGURO)**"
+          break;
+        default:
+          calificacion = "**\nNO PUSISTE UNA NOTA ENTERA**"
+          break;
+      }
+
+      console.log("HE OBTENIDO UN", calificacion)
+    </pre>
+
+    <script>
+      console.log("condicional SWITCH")
+      let nota6 = 8;
+      console.log("Termine el parcial. Mi nota fue la siguiente")
+
+      switch (nota6){
+        case 10:
+          calificacion = "\nEXELENTE"
+          break;
+        case 9:
+        case 8:
+          calificacion = "\nMUY BIEN"
+          break;
+        case 7:
+        case 6:
+          calificacion = "\nAPROBADO"
+          break;
+        case 5:
+          calificacion = "\nEN EL PALO"
+          break;
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+        case 0:
+          calificacion = "\nAMS (A MARZO SEGURO)"
+          break;
+        default:
+          calificacion = "\nNO PUSISTE UNA NOTA ENTERA"
+          break;
+      }
+
+      console.log("HE OBTENIDO UN", calificacion)
+
+    </script>
+    
+    <p>Vamos a aclarar algunos puntos de este ejemplo</p>
+    
+    <li><p>La sentencia <strong>SWITCH</strong> establece que vamos a realizar múltiples condiciones analizando la variable nota</p></li>
+    <li><p>Cada condición se establece mediante un <strong>CASE</strong>, seguido del valor posible de cada caso</p></li>
+    <li><p>El <strong>SWITCH</strong> comenzo evaluando el primer <strong>CASE</strong>, y continua con el resto, hacia abajo.</p></li>
+    <li><p>Observa que algunos <strong>CASE</strong> tienen un <strong>BREAK</strong>. Esto hace que deje de evaluar y se salga del <strong>SWITCH</strong>.</p></li>
+    <li><p>Los <strong>CASE</strong> que no tienen <strong>BREAK</strong>, no se interrumpen, sino que se salta al siguiente <strong>CASE</strong>.</p></li>
+    <li><p>El case especial <strong>DEFAULT</strong> es como un <strong>ELSE</strong>. Si no entra en ninguno de los anteriores, entra en <strong>DEFAULT</strong></p></li>
+    
+    <p>Este ejemplo no es exactamente equivalente al que vimos en el <strong>IF/ELSE</strong> anterior. Este ejemplo funcionaría si sólo ponemos notas con numeros enteros, si ponemos que la nota fue 5.50 nos va a pasar al <strong>DEFAULT</strong> y nos saldria el cartel de <strong>NO PUSISTE UNA NOTA ENTERA</strong> porque no entraria en ninguno de los casos propuestos, salva que hagamos un caso para el 10, un caso para el 9.90, otro para el 9.80 y asi con todos, y obviamente en ese precicos caso lo mas eficiente es un <strong>IF/ELSE</strong>.</p>
+
+    <button><a href="#condicionales">VOLVER ARRIBA</a></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr /><hr /><hr />
     <h2>CICLOS (LOOPS)</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <hr />
     <h2>MANEJO DE ERRORES</h2>
     <hr />
